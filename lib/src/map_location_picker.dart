@@ -407,7 +407,7 @@ class _MapLocationPickerState extends State<MapLocationPicker> {
                       initialValue: _mapType,
                       icon: Icon(
                         Icons.layers,
-                        color: Theme.of(context).colorScheme.onPrimary,
+                        color: Theme.of(context).colorScheme.onSecondary,
                       ),
                       onSelected: (MapType mapType) {
                         setState(() {
@@ -457,7 +457,10 @@ class _MapLocationPickerState extends State<MapLocationPicker> {
                         lat: position.latitude, lng: position.longitude));
                     setState(() {});
                   },
-                  child: const Icon(Icons.my_location),
+                  child: const Icon(
+                    Icons.my_location,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               Card(
